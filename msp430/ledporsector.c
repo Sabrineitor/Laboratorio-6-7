@@ -113,12 +113,13 @@ int main( void )
   }
   P1OUT_bit.P3 ^= 1; //Prende el led
  
+  /*
   //PONEMOS UN BOTON!!!!!
   P1OUT=BIT2;
   P1IES=0;
   P1IFG=0;
   P1IE=BIT2;
- 
+  */
   //setup the ADC10
   ADC10CTL0 &= ~ENC; // Disable Conversion (apagar antes de configurar)
   ADC10CTL0 = SREF_1 + REF2_5V + REFON + ADC10SHT_0 + ADC10ON + ADC10IE + ADC10SR; // Rango, sample and hold time, ADC10ON, interrupt enabled saque refout
