@@ -3,8 +3,8 @@
 #include <string.h>
 #include <math.h>
 
-int cant_sectores = 4000; 
-#define BUFFER_SIZE 512*cant_sectores // Bytes a leer
+//int cant_sectores = 4000; 
+#define BUFFER_SIZE 512*3000 // Bytes a leer
 // Datos = bytes/2
 int i;
 int can; //Para diferenciar si se grabo 1 canal o 2
@@ -32,7 +32,7 @@ int main(int argc, char *argv[]){
         printf("Cant open Drive\n");
         return 1;
     }
-    if(fseek(volume, sector*400*512, SEEK_SET) != 0){ // Sector-aligned offset
+    if(fseek(volume, sector*3000*512, SEEK_SET) != 0){ // Sector-aligned offset
         printf("Can't move to sector\n");
         return 2;
     }
