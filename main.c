@@ -139,6 +139,7 @@ int main( void )
         status=sdWrite(audio.lsb[buffer_out]);//escribo el segundo byte, con los digitos menos significativos
                                //status=99 when the card is full (or reaches a predetermined limit)
         audio.bufferBytes--;    //subtract one from the buffer counter
+        
       }
     }
     }
